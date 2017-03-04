@@ -202,7 +202,7 @@ open class TGLParallaxCarousel: UIView {
             item.layer.add(animationGroup, forKey: "myAnimation")
             
             var t = CATransform3DIdentity
-            t.m34 = -(1 / 500)
+            t.m34 = -(1 / 500) as CGFloat
             t = CATransform3DTranslate(t, xDispNew, 0.0, zDispNew)
             item.layer.transform = t;
             
@@ -323,7 +323,7 @@ open class TGLParallaxCarousel: UIView {
             DispatchQueue.main.async() {
                 UIView.animate(withDuration: 0.33, animations: { () -> Void in
                     var t = CATransform3DIdentity
-                    t.m34 = -(1 / 500)
+                    t.m34 = -(1 / 500) as CGFloat
                     item.layer.transform = CATransform3DTranslate(t, item.xDisp * factor , 0.0, item.zDisp)
                 })
             }
