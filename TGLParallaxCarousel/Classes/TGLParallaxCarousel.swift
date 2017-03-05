@@ -361,6 +361,8 @@ open class TGLParallaxCarousel: UIView {
     
     // MARK: - utils
     func startDecelerating() {
+        guard items.count != 0  else { return }
+        
         isDecelerating = true
         
         let distance = decelerationDistance()
